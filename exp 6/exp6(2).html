@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question 2</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js">
+    </script>
+    <style>
+
+        #car{
+            float: left;
+        }
+        #pole{
+            background-color: blue;
+            width: 10px;
+            height: 200px;
+            float: left;
+   
+        }
+        #dngr{
+            background-color: red;
+            width: 100px;
+            height: 40px;
+            float: left;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+        }
+        #btn{
+            margin-left: 400px;
+        }
+        #a{
+            width: 80px;
+            height: 30px;
+            color: white;
+            background-color: blue;
+            border-color: black;
+            border-width: 2px;
+            margin: 4px;
+        }
+        #b{
+            width: 80px;
+            height: 30px;
+            border-color: blue;
+            border-width: 1px;
+            margin: 4px;
+        }
+        #c{
+            width: 80px;
+            height: 30px;
+            border-color: blue;
+            border-width: 1px;
+            margin: 4px;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <div>
+        <div id="car" style="width: 100px; height: 80px;">
+            <img src="bike.jpg" width = "200" height = "140" alt="">
+        </div>
+
+        <div id = "pole">
+        </div>
+
+        <div id = "dngr">
+            Danger
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="btn">
+        <button id = "a" onclick="move()"> Start </button>
+        <button id = "b" onclick="stop()">Stop</button>
+        <button id = "c" onclick="reset()">Reset</button>
+    </div>
+
+
+</body>
+</html>

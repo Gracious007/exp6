@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+       var items = [];
+       var nos = [];
+       function save(){
+          var data = document.getElementById('data').value;
+          var no = document.getElementById('number').value;
+          for(var i=0;i<items.length;i++){
+                if (items[i] == data){
+                    alert('Contact Name Already Exists\n'+data+" - "+no);
+                    return 0;
+                }
+          }
+          items.push(data);
+          nos.push(no);
+          view();
+       }
+       function view(){
+          var result = "<ol>";
+          for(var i=0;i<items.length;i++){
+              result += "<li>"+items[i]+" - "+ nos[i] +"</li>";
+          }
+          result += "</ol>";
+          document.getElementById('output').innerHTML = result;
+       }
+       function removeFirst(){
+           items.shift();
+           nos.shift();
+           view();
+       }
+       function removeLast(){
+          items.pop();
+          nos.pop();
+          view();
+       }
+   
+    </script>
+    <style>
+        #m{
+            text-align: center;
+            color: blue;
+        }
+        #btn1{
+            width: 90px;
+            height: 30px;
+            color: white;
+            background-color: blue;
+            border-color: black;
+            border-width: 2px;
+            margin: 4px;
+        }
+        #btn2{
+            width: 100px;
+            height: 30px;
+            border-color: blue;
+            border-width: 1px;
+            margin: 4px;
+        }
+        #btn3{
+            width: 100px;
+            height: 30px;
+            border-color: blue;
+            border-width: 1px;
+            margin: 4px;
+        }
+        #btn{
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+        #output{
+            text-align: left;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'm'>
+        <h1>Telephone Directory</h1>
+        Name:<input type="text" id="data"> &nbsp;&nbsp;&nbsp;&nbsp;
+        Mobile Number: <input type="tel" id = 'number'>
+        <br><br>
+        <div id = 'btn'>
+            <button id = "btn1" onclick="save()">Add Contact</button>
+            <button id = "btn2" onclick="removeFirst()">Remove First</button>
+            <button id = "btn3" onclick="removeLast()">Remove Last</button>
+        </div>
+
+        <hr>
+        <div id="output" style="color:blue; font-size:20px;"></div>
+        <hr>
+    </div>
+
+</body>
+</html>

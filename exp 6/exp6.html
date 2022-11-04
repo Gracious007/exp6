@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question 1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <style>
+        #main{
+            height: 500px;
+            width: 600px;
+            border-color: black;
+            background-color: lightgray;
+            margin-top: 50px;
+            margin-left: 50px;
+            padding-top: 50px;
+            padding-left: 30px;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            color: blue;
+            border: 3px solid blue;
+            background-color: yellow;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #r{
+            margin-left: 60px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id = "main">
+        <div id="box">
+            Welcome Text
+        </div>
+        <br><br>
+        Background Color:  <input id = "bgcolor" type="color" onchange="change()">
+        <br><br>
+        Text Color: <input id = "txtcolor" type="color" onchange="change()">
+        <br><br>
+        Text Size:
+        <select id="fs" onchange="change()">
+            <option value='12'>12</option>
+            <option value='14'>14</option>
+            <option value='16'>16</option>
+            <option value='18'>18</option>
+            <option value='20'>20</option>
+            <option value='22'>22</option>
+            <option value='24'>24</option>
+            <option value='26'>26</option>
+          </select>
+        <br><br>
+        Box Width: <input type="text" id="width" onkeyup="change()">
+        <br><br>
+        Box Height: <input type="text" id="height" onkeyup="change()">
+        <br><br>
+        <input type="range"  id="r" min="0" max="100" onchange="change()">
+        <br>
+        <b>Border Radius</b>
+        
+    </div>
+</body>
+</html>
